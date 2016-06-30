@@ -1,0 +1,180 @@
+.codedtinz_b ackground{
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	margin: 0px;
+	z-index: -10;
+ 
+}
+
+.transparant_bkrgnd{
+	background: transparent;
+}
+
+.hide-on-mobile{
+	backgr ound: #fdfdfd;
+}
+
+.topdedication-block{
+	font-family: century;
+	max-height: 250px;
+	background: #000;
+	padding: 15px 15px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	 
+}
+
+.top10list li{ 
+	padding-top: 15px;
+	text-align: center; 
+	height: 30px;
+	border-bottom: 1px solid #fdfdfd;
+	vertical-align: middle;
+}
+
+.top10list li:hover{
+	background: #222;
+}
+
+.top10list li:first-child:hover{
+	background: none;
+}
+
+
+.top10list li h5{ 
+}
+
+
+.topdedication-block h4, .topdedication-block h5{
+	font-family: sans-serif;
+}
+
+
+
+
+
+/* #Tablet (Landscape)
+----------------------------------------------------------------------*/
+@media only screen and (min-width: 1177px) and (max-width: 2855px) {
+
+.showon-mobile{
+	display: none;
+	}
+
+}
+
+/* #Tablet (Landscape)
+----------------------------------------------------------------------*/
+@media only screen and (min-width: 959px) and (max-width: 1177px) {
+
+.showon-mobile{
+	display: none;
+	}
+
+}
+
+/* #Tablet (Portrait)
+----------------------------------------------------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+.showon-mobile{
+	display: none;
+	}
+
+.topdedication-block{
+	font-family: century;
+	max-height: 400px;
+	background: #000;
+	padding: 15px 15px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	 
+	}
+
+
+}
+
+/* #Mobile (Landscape1)
+----------------------------------------------------------------------*/
+@media only screen and (min-width: 600px) and (max-width: 767px) {
+
+.hide-on-mobile{
+	display: none;
+	}
+
+.topdedication-block{
+	font-family: century;
+	max-height: 400px;
+	background: #000;
+	padding: 15px 5px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	 
+}
+
+.top10list li:first-child h5{
+	font-size: 11px;
+	}
+
+
+}
+
+
+
+/* #Mobile (Landscape2)
+----------------------------------------------------------------------*/
+@media only screen and (min-width: 480px) and (max-width: 599px) {
+
+.hide-on-mobile{
+	display: none;
+	}
+
+.topdedication-block{
+	font-family: century;
+	max-height: 400px;
+	background: #000;
+	padding: 15px 5px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	 
+	}
+
+.top10list li:first-child h5{
+	font-size: 10px;
+	}
+
+}
+
+
+/*  #Mobile (Portrait) 320px
+----------------------------------------------------------------------*/
+@media only screen and (min-width: 100px) and (max-width: 479px) {
+
+.hide-on-mobile{
+	display: none;
+	}
+
+.topdedication-block{
+	font-family: century;
+	max-height: 400px;
+	background: #000;
+	padding: 15px 5px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	 
+	}
+
+.top10list li:first-child h5{
+	font-size: 10px;
+	}
+
+.goright
+	{
+		text-align:right;
+		text-shadow:2px 1px #b92826;
+		padding-right: 30px;
+	}
+
+
+}

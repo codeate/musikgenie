@@ -1,0 +1,116 @@
+RewriteEngine On
+  
+RewriteRule ^song/([^/]*)$ song.php?song=$1 [L]
+
+RewriteRule ^songs/track/([^/]*)$ song.php?song=$1 [L]
+
+RewriteRule ^tracks/genre/([^/]*)$ tracks.php?genre=$1 [L]
+
+RewriteRule ^artist/([^/]*)$ artist.php?artist=$1 [L]
+
+RewriteRule ^artiste/([^/]*)$ artist.php?artist=$1 [L]
+
+RewriteRule ^artistesprefix/([^/]*)$ artists.php?prefix=$1 [L]
+
+RewriteRule ^videos/([^/]*)$ videos.php?video=$1 [L]
+
+RewriteRule ^enews/news([^/]*)$ news_single.php?news=$1 [L]
+
+RewriteRule ^events/event([^/]*)$ events_single.php?event=$1 [L]
+
+RewriteRule ^topdedications$ mtop3.php [L]
+
+RewriteRule ^top3$ top3.php [L]
+
+RewriteRule ^home$ index.php [L]
+
+RewriteRule ^touch$ /touch/index.php [L]
+
+RewriteRule ^tracks$ tracks.php [L]
+
+RewriteRule ^songs$ tracks.php [L]
+
+RewriteRule ^contact$ contact.php [L]
+
+RewriteRule ^about$ about.php [L]
+
+RewriteRule ^faq$ faq.php [L]
+
+RewriteRule ^videos$ videos.php [L]
+
+RewriteRule ^artistes$ artists.php [L]
+
+RewriteRule ^enews$ news.php [L]
+
+RewriteRule ^events$ events.php [L]
+
+RewriteRule ^msongs$ songs.php [L]
+
+RewriteRule ^oyacomemakewego\.html$ song.php?song=667 [L]
+
+RewriteRule ^oyacomemakewego$ song.php?song=667 [L]
+
+RewriteRule ^codedtinz$ codedtinz.php [L]
+
+RewriteRule ^2baba/codedtinz$ codedtinz.php [L]
+
+RewriteRule ^2babacodedtinz$ codedtinz.php [L] 
+
+RewriteRule ^search$ helpmefind.php [L]
+
+RewriteRule ^tracks/page([^/]*)$ tracks.php?page=$1 [L]
+
+RewriteRule ^artistes/page([^/]*)$ artists.php?page=$1 [L]
+
+RewriteRule ^enews/page([^/]*)$ news.php?page=$1 [L]
+
+RewriteRule ^events/page([^/]*)$ events.php?page=$1 [L]
+
+## EXPIRES CACHING ##
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access 1 month"
+ExpiresByType image/jpeg "access 1 month"
+ExpiresByType image/gif "access 1 month"
+ExpiresByType image/png "access 1 month"
+ExpiresByType text/css "access 1 month"
+ExpiresByType application/pdf "access 1 month"
+ExpiresByType text/x-javascript "access 1 month"
+ExpiresByType application/x-shockwave-flash "access 1 month"
+ExpiresByType image/x-icon "access 1 year"
+ExpiresDefault "access 1 month"
+</IfModule>
+## EXPIRES CACHING ##
+
+
+
+<IfModule mod_headers.c>
+<FilesMatch "\.(eot|font.css|otf|ttc|ttf|woff)$">
+    Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
+</IfModule>
+<IfModule mod_mime.c>
+# Web fonts
+AddType application/font-woff woff
+AddType application/vnd.ms-fontobject eot
+
+# Browsers usually ignore the font MIME types and sniff the content,
+# however, Chrome shows a warning if other MIME types are used for the
+# following fonts.
+AddType application/x-font-ttf ttc ttf
+AddType font/opentype otf
+
+# Make SVGZ fonts work on iPad:
+# https://twitter.com/FontSquirrel/status/14855840545
+AddType     image/svg+xml svg svgz
+AddEncoding gzip svgz
+
+</IfModule>
+
+# rewrite www.example.com → example.com
+
+<IfModule mod_rewrite.c>
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
+</IfModule>

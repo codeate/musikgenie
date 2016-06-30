@@ -1,0 +1,78 @@
+http://www.generateit.net/mod-rewrite/index.php
+
+Song.php and song id
+http://musikgenie.com/song.php?song=250
+http://musikgenie.com/song/250
+
+RewriteEngine On
+RewriteRule ^song/([^/]*)$ song.php?song=$1 [L]
+----------------------------------------------------
+
+tracks.php and genre id
+http://musikgenie.com/tracks.php?genre=2
+http://musikgenie.com/genre/2
+
+RewriteEngine On
+RewriteRule ^genre/([^/]*)$ tracks.php?genre=$1 [L]
+--------------------------------------------------------
+
+Artist and Artist id
+http://musikgenie.com/artist.php?artist=36
+http://musikgenie.com/artist/36
+
+RewriteEngine On
+RewriteRule ^artist/([^/]*)$ /artist.php?artist=$1 [L]
+-----------------------------------------------------------
+
+Artist and ArtistPrefix so select artist name prefix
+http://musikgenie.com/artists.php?prefix=d
+http://musikgenie.com/artistsprefix/d
+
+RewriteEngine On
+RewriteRule ^artistprefix/([^/]*)$ /artists.php?prefix=$1 [L]
+-----------------------------------------------------------------
+
+Videos and Video Ids
+http://musikgenie.com/videos.php?video=zgpE15sFN1I
+http://musikgenie.com/videos/zgpE15sFN1I
+
+RewriteEngine On
+RewriteRule ^videos/([^/]*)$ /videos.php?video=$1 [L]
+--------------------------------------------------------------------
+
+Newssing.php and news id
+
+http://musikgenie.com/news_single.php?newstitle=olad hbjw w wokaw&news=1
+
+
+http://musikgenie.com/news_single.php?news=
+
+http://musikgenie.com/enews/news1
+
+http://musikgenie.com/news/9
+
+RewriteEngine On
+RewriteRule ^news/([^/]*)$ /news_single.php?news=$1 [L]
+----------------------------------------------------------------------
+Tracks and tracks next pages
+http://musikgenie.com/tracks.php?page=3
+http://musikgenie.com/tracks/page3
+
+RewriteEngine On
+RewriteRule ^tracks/page([^/]*)$ /tracks.php?page=$1 [L]
+----------------------------------------------------------------------
+artist and artist next page
+http://musikgenie.com/artists.php?page=4
+http://musikgenie.com/artistes/page4
+
+RewriteEngine On
+RewriteRule ^artistes/page([^/]*)$ /artists.php?page=$1 [L]
+---------------------------------------------------------------------------
+
+News and next page
+http://musikgenie.com/news.php?page=5
+http://musikgenie.com/news/page5
+
+RewriteEngine On
+RewriteRule ^news/page([^/]*)$ /news.php?page=$1 [L]
+----------------------------------------------
